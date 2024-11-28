@@ -1,0 +1,27 @@
+name: keypy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utilisation de la dernière version stable de Ubuntu
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]  # Teste sur plusieurs versions de Python
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4  # Vérifie le code source
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3  # Configure Python pour le workflow
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip  # Met à jour pip
+        pip install pylint  # Installe pylint pour l'analyse de code
+
+    - name: Analyse du code avec pylint
+      run: |
+        pylint D:/Jeux/script/Keypy/Keypy.py  # Exécute pylint sur le script Keypy.py
