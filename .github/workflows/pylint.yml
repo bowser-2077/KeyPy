@@ -1,27 +1,29 @@
-name: Pylint
+name: Python Linting with Pylint
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: windows-latest  # Utilisation de la dernière version stable de Windows
+  lint:
+    runs-on: windows-latest  # Utilisation de Windows pour l'exécution
+
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]  # Tester sur plusieurs versions de Python
+
     steps:
     - name: Check out code
-      uses: actions/checkout@v4  # Vérifie le code source
+      uses: actions/checkout@v4  # Récupère le code source du dépôt
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3  # Configure Python pour le workflow
+      uses: actions/setup-python@v3  # Configure Python
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ matrix.python-version }}  # Utilisation de la version de Python définie dans la matrice
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip  # Met à jour pip
-        pip install pylint  # Installe pylint pour l'analyse de code
+        pip install pylint  # Installe pylint pour l'analyse du code
 
-    - name: Analyse du code avec pylint
+    - name: Lint the code with Pylint
       run: |
-        pylint D:\Jeux\script\Keypy\Keypy.py  # Exécute pylint sur le script Keypy.py à l'emplacement spécifique sous Windows
+        pylint **/*.py  # Analyse tous les fichiers Python dans le dépôt (utilisation de glob pour tous les fichiers .py)
