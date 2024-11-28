@@ -1,13 +1,13 @@
-name: keypy
+name: Pylint
 
 on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Utilisation de la dernière version stable de Ubuntu
+    runs-on: windows-latest  # Utilisation de la dernière version stable de Windows
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]  # Teste sur plusieurs versions de Python
+        python-version: ["3.8", "3.9", "3.10"]  # Tester sur plusieurs versions de Python
     steps:
     - name: Check out code
       uses: actions/checkout@v4  # Vérifie le code source
@@ -24,4 +24,4 @@ jobs:
 
     - name: Analyse du code avec pylint
       run: |
-        pylint D:/Jeux/script/Keypy/Keypy.py  # Exécute pylint sur le script Keypy.py
+        pylint D:\Jeux\script\Keypy\Keypy.py  # Exécute pylint sur le script Keypy.py à l'emplacement spécifique sous Windows
