@@ -1,0 +1,13 @@
+SetKeyPyAsCmd.bat
+
+-You need to change file values to make it usable like that:
+
+C:\User\Bowser>keypy
+
+keypy.bat
+
+-You dont need to change anything on this file.
+
+Kepy.py
+
+-Its just the app, you can double click to launch it.
