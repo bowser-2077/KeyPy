@@ -2,6 +2,8 @@
 
 KeyPy est un gestionnaire de mots de passe sécurisé qui permet de stocker vos mots de passe de manière chiffrée à l'aide d'un mot de passe maître. Il utilise le chiffrement en Base64 pour protéger vos informations, et les mots de passe sont stockés dans un fichier caché dans le répertoire `NoGuys hehe, I want to make keypy safe so no.`.
 
+KEYPY ARE NOT 100% SAFE, YOU CAN MOD IT TO MAKE IT MORE SAFE!
+
 ## Fonctionnalités
 
 - **Gestion des mots de passe** : Voir et ajouter des mots de passe pour différents sites et applications.
