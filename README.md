@@ -5,8 +5,9 @@ KeyPy est inspiré du projet open-source KeyPass [Télécharger KeyPass](https:/
 
 KEYPY ARE NOT 100% SAFE, YOU CAN MOD IT TO MAKE IT MORE SAFE!
 
-```bash
-When you enter any password, it can be hided, press enter to save it
+## Warning
+
+If you dont see you pswd when you type it, dont worry, its not a bug. Your password is just hided. 
 
 ## Fonctionnalités
 
