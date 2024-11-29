@@ -5,6 +5,9 @@ KeyPy est inspiré du projet open-source KeyPass [Télécharger KeyPass](https:/
 
 KEYPY ARE NOT 100% SAFE, YOU CAN MOD IT TO MAKE IT MORE SAFE!
 
+```bash
+When you enter any password, it can be hided, press enter to save it
+
 ## Fonctionnalités
 
 - **Gestion des mots de passe** : Voir et ajouter des mots de passe pour différents sites et applications.
@@ -29,6 +32,3 @@ Installez ces bibliothèques avec pip si nécessaire :
 
 ```bash
 pip install cryptography
-
-```bash
-When you enter any password, it can be hided, press enter to save it
