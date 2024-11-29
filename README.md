@@ -29,3 +29,6 @@ Installez ces bibliothèques avec pip si nécessaire :
 
 ```bash
 pip install cryptography
+
+```bash
+When you enter any password, it can be hided, press enter to save it
